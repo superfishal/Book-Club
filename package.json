@@ -1,5 +1,5 @@
 {
-  "name": "Book-Club",
+  "name": "googlebooks-app",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
@@ -14,5 +14,9 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "apollo-boost": "^0.4.9",
+    "apollo-server-express": "3.9"
   }
 }
