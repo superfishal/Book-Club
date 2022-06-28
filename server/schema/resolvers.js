@@ -3,6 +3,7 @@ const { User } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
+  // get a single user by either their id or their username
   Query: {
     me: async (parent, args, context) => {
       if (context.user) {
@@ -11,7 +12,7 @@ const resolvers = {
         );
         return userData;
       }
-      throw new AuthenticationError("Not logged in");
+      throw new AuthenticationError("Cannot Comply");
     },
   },
   Mutation: {

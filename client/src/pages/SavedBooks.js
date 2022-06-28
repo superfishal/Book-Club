@@ -6,7 +6,6 @@ import {
   Card,
   Button,
 } from "react-bootstrap";
-import { getMe, deleteBook } from "../utils/API";
 import Auth from "../utils/auth";
 import { removeBookId } from "../utils/localStorage";
 // add useMutation and useQuery from query apollo
@@ -28,7 +27,7 @@ const SavedBooks = () => {
     }
 
     try {
-      const { data } = await deleteBook({ variables: { bookId } });
+      const { data } = await removeBook({ variables: { bookId } });
       removeBookId(bookId);
     } catch (err) {
       console.error(err);
